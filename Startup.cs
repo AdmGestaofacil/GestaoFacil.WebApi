@@ -100,7 +100,7 @@ namespace GestaoFacil.WebApi
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "MimicAPI");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "GestaoFacil API");
                 c.RoutePrefix = string.Empty;
             });
 
