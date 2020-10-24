@@ -26,6 +26,7 @@ namespace GestaoFacil.WebApi.Controllers
         }
 
 
+
         /// <summary>
         /// Operação que pega todos os funcionarios do banco que existem
         /// </summary>
