@@ -47,6 +47,7 @@ namespace GestaoFacil.WebApi
             //Registrando como serviço minhas interfaces pra ser usado nos controles... 
             services.AddTransient<IFuncionarioRepository,  FuncionarioRepository>();
             services.AddTransient<IServicoRepository, ServicoRepository>();
+            services.AddTransient<ITipoDespesaRepository, TipoDespesaRepository>();
             //services.AddScoped<IServicoRepository, ServicoRepository>();
 
             services.AddMvc();

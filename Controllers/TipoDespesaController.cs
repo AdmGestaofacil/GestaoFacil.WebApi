@@ -9,15 +9,15 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GestaoFacil.WebApi.Controllers
 {
-    [Route("api/Servico")]
-    public class ServicoController : ControllerBase
+    [Route("api/TipoDespesa")]
+    [ApiController]
+    public class TipoDespesaController : ControllerBase
     {
 
-        private readonly IServicoRepository _servicoRepository;
-       
-        public ServicoController(IServicoRepository servico)
+        private readonly ITipoDespesaRepository _tipoDespesaRepository;
+        public TipoDespesaController(ITipoDespesaRepository tipoDespesaRepository)
         {
-            _servicoRepository = servico;
+            _tipoDespesaRepository = tipoDespesaRepository;
         }
 
         //APP  
@@ -25,7 +25,7 @@ namespace GestaoFacil.WebApi.Controllers
         [HttpGet]
         public ActionResult ObterTodos()
         {
-            var item = _servicoRepository.GetAll();
+            var item = _tipoDespesaRepository.GetAll();
             return Ok(item);
         }
 
@@ -35,7 +35,7 @@ namespace GestaoFacil.WebApi.Controllers
         [HttpGet]
         public ActionResult Obter(int id)
         {
-            var obj = _servicoRepository.Find(id);
+            var obj = _tipoDespesaRepository.Find(id);
             if (obj == null)
                 return NotFound();
 
@@ -46,31 +46,28 @@ namespace GestaoFacil.WebApi.Controllers
         [Route("")]
         // ex: /api/palavras (post:id.nome,ativo,pontuacao,data)
         [HttpPost]
-        public ActionResult Cadastrar([FromBody]  Servico servico)  //Servico Servico como quebrar esse vinculo direto com a model
+        public ActionResult Cadastrar([FromBody] TipoDespesa tipodepesa)
         {
 
-            if (servico == null)
+            if (tipodepesa == null)
                 return BadRequest();
 
             //Validando dados 
             if (!ModelState.IsValid)
                 return UnprocessableEntity(ModelState);
 
-            servico.DataCadastro = DateTime.Now;
-            servico.DtAtualizacao = DateTime.Now;
-            servico.IsDescontinuado = false;
+            _tipoDespesaRepository.Add(tipodepesa);
 
-            _servicoRepository.Add(servico);
-
-            return Created($"/api/servico/{servico.ServicoId}", servico);
+            return Created($"/api/tipodespesa/{tipodepesa.TipoDespesaId}", tipodepesa);
         }
+
 
         [Route("{id}")]
         [HttpPut]
-        public ActionResult Atualizar(int id, [FromBody]Servico servico)//Servico Servico como quebrar esse vinculo direto com a model
+        public ActionResult Atualizar(int id, [FromBody] TipoDespesa tipodespesa)
         {
 
-            if (servico == null)
+            if (tipodespesa == null)
                 return BadRequest();
 
             //Validando dados 
@@ -78,29 +75,25 @@ namespace GestaoFacil.WebApi.Controllers
                 return UnprocessableEntity(ModelState);
 
 
-            var obj = _servicoRepository.Find(id);
+            var obj = _tipoDespesaRepository.Find(id);
             if (obj == null)
                 return NotFound();
 
-            servico.ServicoId = id;
-            servico.DataCadastro = obj.DataCadastro;
-            servico.DtAtualizacao = DateTime.Now;
 
-            _servicoRepository.Update(servico);
+            _tipoDespesaRepository.Update(tipodespesa);
             return Ok();
         }
+
 
         [Route("{id}")]
         [HttpDelete]
         public ActionResult Deletar(int id)
         {
-            var ret = _servicoRepository.Remove(id);
-            if (ret == 0)
-                return NotFound();
-
-            return NoContent(); 
+          _tipoDespesaRepository.Remove(id);
+            return NoContent();
         }
 
-        //melhorias
+
     }
+
 }
