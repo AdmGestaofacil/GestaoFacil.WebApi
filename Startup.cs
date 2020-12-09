@@ -48,6 +48,8 @@ namespace GestaoFacil.WebApi
             services.AddTransient<IFuncionarioRepository,  FuncionarioRepository>();
             services.AddTransient<IServicoRepository, ServicoRepository>();
             services.AddTransient<ITipoDespesaRepository, TipoDespesaRepository>();
+            services.AddTransient<IDespesaRepository, DespesaRepository>();
+            services.AddTransient<IValeRepository, ValeRepository>();
             //services.AddScoped<IServicoRepository, ServicoRepository>();
 
             services.AddMvc();
