@@ -15,7 +15,7 @@ namespace GestaoFacil.WebApi.Controllers
     //[ApiVersion("1.1")]//fala que o controlador tem as 2 versões.
 
     public class FuncionarioController : ControllerBase
-    {]
+    {
         private readonly IFuncionarioRepository _funcioanrioRepository;
         private readonly IMapper _mapper;
 
