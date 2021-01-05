@@ -20,7 +20,7 @@ namespace GestaoFacil.WebApi.Controllers
             _despesaRepository = despesa;
         }
 
-        //APP  
+        //APP   
         [Route("")]
         [HttpGet]
         public ActionResult ObterTodos()
