@@ -13,7 +13,7 @@ namespace GestaoFacil.WebApi.Controllers
     [Route("api/v{verion:apiVersion}/[controller]")] // é o mesmo que => [Route("api/palavras")]  //Criando rotas por atributos
     [ApiVersion("1.0")]
     //[ApiVersion("1.1")]//fala que o controlador tem as 2 versões.
-
+    //a
     public class FuncionarioController : ControllerBase
     {
         private readonly IFuncionarioRepository _funcioanrioRepository;
