@@ -7,7 +7,7 @@ using System;
 namespace GestaoFacil.WebApi.Controllers
 {
 
-
+    //s
     [ApiController]
     //[Route("api/Funcionario")]
     [Route("api/v{verion:apiVersion}/[controller]")] // é o mesmo que => [Route("api/palavras")]  //Criando rotas por atributos
