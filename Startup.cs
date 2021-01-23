@@ -38,7 +38,7 @@ namespace GestaoFacil.WebApi
             #endregion
 
             IMapper mapper = config.CreateMapper();
-            services.AddSingleton(mapper);
+            services.AddSingleton(mapper);  // injetando...
 
 
             services.AddControllers();

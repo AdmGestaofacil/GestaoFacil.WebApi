@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using GestaoFacil.Dados.Modelos;
+using GestaoFacil.Dados.Modelos.DTO;
 using GestaoFacil.Dados.Repositories.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using AutoMapper;
 
 namespace GestaoFacil.WebApi.Controllers
 {
@@ -14,21 +16,25 @@ namespace GestaoFacil.WebApi.Controllers
     public class ValeController : ControllerBase
     {
         private readonly IValeRepository _vale;
+        private readonly IMapper _mapper;
 
-        public ValeController(IValeRepository vale)
+        public ValeController(IValeRepository vale, IMapper mapper)
         {
-
             _vale = vale;
+            _mapper = mapper;
         }
-
 
         //APP  
         [Route("")]
         [HttpGet]
         public ActionResult ObterTodos()
         {
-            var item = _vale.GetAll();
-            return Ok(item);
+            
+            var obj = _vale.GetVales();
+            return Ok(obj);
+
+            //var item = _vale.GetAll();
+            //return Ok(item);
         }
 
 
@@ -90,7 +96,6 @@ namespace GestaoFacil.WebApi.Controllers
             return Ok();
         }
 
-
         [Route("{id}")]
         [HttpDelete]
         public ActionResult Deletar(int id)
@@ -100,6 +105,24 @@ namespace GestaoFacil.WebApi.Controllers
                 return NotFound();
 
             return NoContent();
+        }
+
+
+
+        /*exmplo de uso dos mapeamntos de objetos*/
+        private ActionResult ObterObjetoTOValeDto()
+        {
+            var obj = _vale.GetVales();
+            ValeDTO valeDTO = _mapper.Map<ValeDTO>(obj);
+            return Ok(obj);
+        }
+
+
+        private ActionResult GetAll()
+        {
+            var lstVales = _vale.GetAll();
+            var _vales = _mapper.Map<List<ValeDTO>>(lstVales);
+            return Ok(_vales);
         }
 
     }
