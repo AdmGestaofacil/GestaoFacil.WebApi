@@ -26,10 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GestaoFacil.Dados\GestaoFacil.Dados.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="GestaoFacil.WebApi.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
