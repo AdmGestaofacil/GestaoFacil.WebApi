@@ -7774,11 +7774,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\GestaoFacil\\GestaoFacil.WebApi\\GestaoFacil.WebApi.csproj",
+      "projectUniqueName": "C:\\Sistema\\AdmGestaofacil\\GestaoFacil.WebApi\\GestaoFacil.WebApi.csproj",
       "projectName": "GestaoFacil.WebApi",
-      "projectPath": "C:\\GestaoFacil\\GestaoFacil.WebApi\\GestaoFacil.WebApi.csproj",
+      "projectPath": "C:\\Sistema\\AdmGestaofacil\\GestaoFacil.WebApi\\GestaoFacil.WebApi.csproj",
       "packagesPath": "C:\\Users\\adriano\\.nuget\\packages\\",
-      "outputPath": "C:\\GestaoFacil\\GestaoFacil.WebApi\\obj\\",
+      "outputPath": "C:\\Sistema\\AdmGestaofacil\\GestaoFacil.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -7871,7 +7871,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.405\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.407\\RuntimeIdentifierGraph.json"
       }
     }
   }

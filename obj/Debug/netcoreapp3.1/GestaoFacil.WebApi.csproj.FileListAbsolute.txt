@@ -280,3 +280,11 @@ C:\GestaoFacil\GestaoFacil.WebApi\obj\Debug\netcoreapp3.1\GestaoFacil.WebApi.dll
 C:\GestaoFacil\GestaoFacil.WebApi\obj\Debug\netcoreapp3.1\GestaoFacil.WebApi.pdb
 C:\GestaoFacil\GestaoFacil.WebApi\obj\Debug\netcoreapp3.1\GestaoFacil.WebApi.genruntimeconfig.cache
 C:\GestaoFacil\GestaoFacil.WebApi\obj\Debug\netcoreapp3.1\GestaoFacil.WebApi.csprojAssemblyReference.cache
+C:\Sistema\AdmGestaofacil\GestaoFacil.WebApi\obj\Debug\netcoreapp3.1\GestaoFacil.WebApi.csprojAssemblyReference.cache
+C:\Sistema\AdmGestaofacil\GestaoFacil.WebApi\obj\Debug\netcoreapp3.1\GestaoFacil.WebApi.AssemblyInfoInputs.cache
+C:\Sistema\AdmGestaofacil\GestaoFacil.WebApi\obj\Debug\netcoreapp3.1\GestaoFacil.WebApi.AssemblyInfo.cs
+C:\Sistema\AdmGestaofacil\GestaoFacil.WebApi\obj\Debug\netcoreapp3.1\GestaoFacil.WebApi.csproj.CoreCompileInputs.cache
+C:\Sistema\AdmGestaofacil\GestaoFacil.WebApi\obj\Debug\netcoreapp3.1\GestaoFacil.WebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Sistema\AdmGestaofacil\GestaoFacil.WebApi\obj\Debug\netcoreapp3.1\GestaoFacil.WebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Sistema\AdmGestaofacil\GestaoFacil.WebApi\obj\Debug\netcoreapp3.1\GestaoFacil.WebApi.dll
+C:\Sistema\AdmGestaofacil\GestaoFacil.WebApi\obj\Debug\netcoreapp3.1\GestaoFacil.WebApi.pdb

@@ -26,6 +26,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="GestaoFacil.Dados">
+      <HintPath>..\GestaoFacil.Dados\bin\Debug\netcoreapp3.1\GestaoFacil.Dados.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="GestaoFacil.WebApi.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
